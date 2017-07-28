@@ -14,6 +14,7 @@ Configuration
 
 Example configuration::
 
+    import dockerflow
     import logging.config
 
     cfg = {
@@ -41,7 +42,8 @@ Example configuration::
 
     logging.config.dictConfig(cfg)
 
-    logging.info('I am logging in mozlog format now! woo hoo!')
+    logger = logging.getLogger('myservicename')
+    logger.info('I am logging in mozlog format now! woo hoo!')
 
 
 In this example, we set up a logger for ``myservice`` (you'd replace that with
